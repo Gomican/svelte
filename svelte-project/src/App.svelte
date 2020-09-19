@@ -1,9 +1,13 @@
 <script>
-	const message='Hello!'
+	const messages = ['Hello!', 'Svelte!'];
+	let current = 0;
+
+	const toggle = () => current = (current+1) % 2;
 </script>
 
 <main>
-	{message}
+	{messages[current]}
+	<button on:click={toggle}>Toggle Message</button>
 </main>
 
 <style>

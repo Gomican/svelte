@@ -1,4 +1,6 @@
 <script>
+	import Greeting from './Greeting.svelte'
+
 	const messages = ['Hello!', 'Svelte!'];
 	let current = 0;
 
@@ -6,6 +8,7 @@
 </script>
 
 <main>
+	<Greeting userName='Gmican' />
 	{messages[current]}
 	<button on:click={toggle}>Toggle Message</button>
 </main>

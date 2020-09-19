@@ -1,16 +1,12 @@
 <script>
 	import Greeting from './Greeting.svelte'
-
-	const messages = ['Hello!', 'Svelte!'];
-	let current = 0;
-
-	const toggle = () => current = (current+1) % 2;
+	import Card from './Card.svelte'
 </script>
 
 <main>
-	<Greeting userName='Gmican' />
-	{messages[current]}
-	<button on:click={toggle}>Toggle Message</button>
+	<Card>
+		<Greeting userName='Gmican' />
+	</Card>
 </main>
 
 <style>
